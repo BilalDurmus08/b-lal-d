@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("******program to calculate triangle*****");
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Write the first of the triangle: ");
+        int side1 = scan.nextInt();
+        System.out.print("Write the second of the triangle: ");
+        int side2 = scan.nextInt();
+        System.out.print("Write the third of the triangle: ");
+        int side3 =scan.nextInt();
+
+        if (side1+side2<side3 ){
+            System.out.println("There is no triangle");
+        }
+        else if (side1+side3<side2){
+            System.out.println("There is no triangle");
+        }
+        else if (side2+side3<side1){
+            System.out.println("There is no triangle");
+        }
+        else {
+            double u = (side1 + side2 + side3) / 2;
+            double alan = Math.sqrt(u * (u - side1) * (u - side2) * (u - side3));
+            System.out.println("Triangle of the area is: " + alan);
+        }
+    }
+}
