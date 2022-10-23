@@ -1,0 +1,38 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Student Grading System");
+
+        System.out.print("Please enter your note:");
+        Scanner scan = new Scanner (System.in);
+        int note =scan.nextInt();
+
+        if (note>100){
+            System.out.println("Invalid Score");
+        }
+        else if(note>=90){
+            System.out.println("Grade: AA\nState:Passed" );
+        }
+        else if (90>note && note>=85){
+            System.out.println("Grade: AB\nState:Passed");
+        }
+        else if (85>note && note>= 80) {
+            System.out.println("Grade: BA\nState:Passed");
+        } else if (80>note && note>=75) {
+            System.out.println("Grade: BB\nState:Passed");
+        } else if (75>note && note>=70){
+            System.out.println("Grade: CB\nState:Passed");
+        } else if (70>note && note>=65){
+            System.out.println("Grade: CC\nState:Passed");
+        } else if (65>note && note>=60){
+            System.out.println("Grade: DC\nState:Passed");
+        } else if (60>note && note>=50){
+            System.out.println("Grade: DD\nState:Passed");
+        } else if (50>note && note>=0){
+            System.out.println("Grade: FF\nState:Failed");
+        } else if (0>note){
+            System.out.println("Invalid Score");
+        }
+    }
+}
