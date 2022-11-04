@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class Delta {
+    public static void main(String[] args) {
+
+
+        System.out.println("******The calculate roots programme******");
+        Scanner scan = new Scanner(System.in);
+        System.out.println("ax^2 + bx + c\n"
+                         +"Please enter a, b , c values:");
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+        int c = scan.nextInt();
+        System.out.println(" Final equation is: "+a+"x^2 + "+b+"x + "+c);
+        double discriminant = Math.pow(b,2)-4*a*c;
+
+        System.out.println("Discriminant: "+discriminant);
+
+        double root1;
+        double root2;
+        if (discriminant>0){
+            System.out.println("\n**There are two roots**");
+             root1 = (-b + Math.sqrt(discriminant))/(2*a);
+             root2 = (-b - Math.sqrt(discriminant))/(2*a);
+            System.out.println("The roots are: "+root1+" "+root2);
+        }
+        else if (discriminant==0){
+            System.out.println("**There is just one root**");
+            root1 = -b/(2*a);
+            System.out.println("**The root is: "+ root1);
+        }
+        else{
+            System.out.println("**There is not root");
+        }
+    }
+}
