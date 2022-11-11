@@ -1,0 +1,72 @@
+import java.util.Scanner;
+
+public class assignment {
+    public static void main(String[] args) {
+        //Bilal Durmuş  20005400124
+        System.out.println("****The calculate GCD system****");
+        int a ;
+        a = (int)(Math.random()*1000);
+        int b;
+        b = (int)(Math.random()*1000);
+
+        int temp1 = a;
+        int GCD = 0;
+        if (b>a){
+            int temp = a;
+            a = b;
+            b = temp;
+        }
+        System.out.println("The first number is: "+a+"\nThe second number is: "+b);
+       int choose =5;
+        while(true) {
+            Scanner scan = new Scanner(System.in);
+            System.out.println("There are two option that you can choose\n" +
+                                "The first option is: 1- Brute-Force Algorithm\n" +
+                                "The second option is: 2- Euclidean Algorithm\n" +
+                                "Please choose 2 or 1:");
+            choose = scan.nextInt();
+            if (choose == 1 || choose == 2) {
+                break;
+            }
+             else {
+                    System.out.println("Please choose again");
+                }
+            }
+            if (choose == 1){
+                if(b==0){
+                    System.out.println("The GCD is: "+a);
+                }
+                else{
+                    while(true){
+
+                    int c;
+                    int d;
+                    c = a%temp1;
+                    d = b%temp1;
+                    if (c == 0 && d == 0){
+                        GCD = temp1;
+                        break;
+                    }
+                    else{
+                        temp1=temp1-1;
+                    }
+                    }
+                }
+
+            }
+            else if (choose == 2){
+                int k;
+                k = a % b;
+                while ( k!=0 ){
+                    a=b;
+                    b=k;
+                    k=a%b;
+
+                }//end-while
+                GCD=b;
+            }
+
+
+        System.out.println("The Gcd is: "+GCD);
+            }
+    }
