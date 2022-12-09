@@ -1,4 +1,4 @@
-public class tas1 {
+public class multidimensional_task1 {
     public static void main(String[] args) {
         int[][] matrix = new int[4][4];
         for (int i = 0; i<4; i++){
