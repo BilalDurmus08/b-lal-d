@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class task2 {
+public class multidimensional_task2 {
     public static void main(String[] args) {
         System.out.print("Please enter your Array row:");
         Scanner scan = new Scanner(System.in);
